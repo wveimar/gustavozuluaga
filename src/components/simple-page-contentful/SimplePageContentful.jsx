@@ -19,11 +19,12 @@ function SimplePageContentful({code}) {
     return <p>No Data!</p>;
   }
   const [page] = data.simplePageCollection.items;
+  
   return (
     <div>
+      <img width={500} src={page && page.image.url}></img>
       <h5>{page && page.name}</h5>
       <p>{page && page.description}</p>
-      <img width={500} src={page && page.image.url}></img>
     </div>
   );
 }
