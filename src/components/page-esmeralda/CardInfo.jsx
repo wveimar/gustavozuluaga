@@ -24,7 +24,7 @@ const CartInfo = () => {
 
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
         {dataCard && dataCard.map((cardInfo) => <Card info={cardInfo} />)}
       </div>
     </div>
