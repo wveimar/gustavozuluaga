@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { gql, useQuery } from "@apollo/client";
-import * as styles from "./nav-bar.module.css";
+import "./navBar.css";
 
 export default function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
   const { error, data } = useQuery(MENU_NAVIGATIONS_QUERY);
   if (error && error.networkError) {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
@@ -14,30 +15,51 @@ export default function NavBar() {
 
   const { items } = data.menuNavigationCollection;
 
-  const menuOptions = (menu) => {
-    return (
-      menu &&
-      menu.map((item) => (
-        <Link
-          className={styles.navigationItem}
-          key={item.menuPath}
-          to={
-            item.menuType === "SimplePageLink"
-              ? `/page?code=${item.menuPath}`
-              : item.menuPath
-          }
-        >
-          {item.name}
-        </Link>
-      ))
-    );
-  };
+
+
+  // const menuOptions = (menu) => {
+  //   return (
+  //     menu &&
+  //     menu.map((item) => (
+  //       <Link
+  //         className="navigationItem"
+  //         key={item.menuPath}
+  //         to={
+  //           item.menuType === "SimplePageLink"
+  //             ? `/page?code=${item.menuPath}`
+  //             : item.menuPath
+  //         }
+  //       >
+  //         {item.name}
+  //       </Link>
+  //     ))
+  //   );
+  // };
+
   return (
-    <nav role="navigation" className={styles.container} aria-label="Main">
-      <Link to="/" className={styles.logoLink}>
-        <img className={styles.logo} src="/images/logoMenu.png" />
+    <nav role="navigation" className="Navbar" aria-label="Main">
+      <Link to="/" className="nav-logo">
+        <img className="logo" src="/images/logoMenu.png"/>
       </Link>
-      <ul className={styles.navigation}>{menuOptions(items)}</ul>
+      <ul className={`nav-items ${isOpen && "open"}`}>
+        {items &&
+          items.map((item) => (
+            <Link
+              className="nav-link"
+              key={item.menuPath}
+              to={
+                item.menuType === "SimplePageLink"
+                  ? `/page?code=${item.menuPath}`
+                  : item.menuPath
+              }
+            >
+              {item.name}
+            </Link>
+          ))}
+      </ul>
+      <div className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
+        <div className="bar"></div>
+      </div>
     </nav>
   );
 }

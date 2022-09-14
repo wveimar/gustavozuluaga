@@ -39,7 +39,7 @@ const CARD_QUERY = gql`
       items {
         code
         name
-        description
+        description 
         image {
           url
         }

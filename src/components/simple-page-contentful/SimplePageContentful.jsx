@@ -9,7 +9,7 @@ function SimplePageContentful({code}) {
   const { error, data } = useQuery(SIMPLE_PAGE_QUERY, {
     variables: {
       where: { code_contains: code },
-    },
+    },    
   });
 
   if (error && error.networkError) {
@@ -17,6 +17,7 @@ function SimplePageContentful({code}) {
   }
   if (!data) {
     return <p>No Data!</p>;
+    
   }
   const [page] = data.simplePageCollection.items;
   

@@ -23,13 +23,14 @@ const Image = () => {
         style={{
           color: "white",
           position: "absolute",
-          zIndex: "0",
           width: "80%",
-          marginTop: "1rem",
+          marginTop: "3rem",
+          marginLeft: "1rem",
+          marginRight: "1rem",
           textAlign: "center",
           background: "black",
           opacity: 0.6,
-          padding: "1rem",
+          padding: "2rem",
         }}
       >
         <h2>{image.description}</h2>

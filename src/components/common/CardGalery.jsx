@@ -4,7 +4,7 @@ import './CardGalery.css'
 const CardGalery = ({infoImage}) => {
   return (
     <div className="grid-container">
-        <article id="3685" class="location-listing">
+        <article id="3685" className="location-listing">
           <p className="location-title">{infoImage.description}</p>
           <div className="location-image">
             <img
