@@ -1,6 +1,7 @@
 import { useQuery, gql } from "@apollo/client";
 import React from "react";
 import Card from "../common/Card";
+import * as styles from "./cardInfo.module.css";
 
 const CartInfo = () => {
   const { error, data } = useQuery(CARD_QUERY, {
@@ -24,8 +25,13 @@ const CartInfo = () => {
 
   return (
     <div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
-        {dataCard && dataCard.map((cardInfo) => <Card info={cardInfo} />)}
+      <div className={styles.container}>
+        {dataCard &&
+          dataCard.map((cardInfo, index) => (
+            
+              <Card info={cardInfo} key={index} />
+            
+          ))}
       </div>
     </div>
   );
@@ -39,7 +45,8 @@ const CARD_QUERY = gql`
       items {
         code
         name
-        description 
+        shortDescription
+        description
         image {
           url
         }

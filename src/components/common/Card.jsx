@@ -10,7 +10,7 @@ const Card = ({info}) => {
           <h4>
             <b>{info.name}</b>
           </h4>
-          <p>{}</p>
+          <p>{info.shortDescription}</p>
         </div>
       </a>
 

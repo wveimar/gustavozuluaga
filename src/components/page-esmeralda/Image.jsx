@@ -1,5 +1,6 @@
-import { useQuery, gql } from "@apollo/client";
 import React from "react";
+import { useQuery, gql } from "@apollo/client";
+import "./image.css";
 
 const Image = () => {
   const { error, data } = useQuery(SIMPLE_IMAGE, {
@@ -18,24 +19,11 @@ const Image = () => {
   const [image] = data.simplePageCollection.items;
   // console.log(image);
   return (
-    <div>
-      <div
-        style={{
-          color: "white",
-          position: "absolute",
-          width: "80%",
-          marginTop: "3rem",
-          marginLeft: "1rem",
-          marginRight: "1rem",
-          textAlign: "center",
-          background: "black",
-          opacity: 0.6,
-          padding: "2rem",
-        }}
-      >
+    <div className="container">
+      <div className="container-text">
         <h2>{image.description}</h2>
       </div>
-      <div>
+      <div className="container-img">
         <img src={image.image.url} alt="image head" />
       </div>
     </div>

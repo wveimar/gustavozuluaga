@@ -16,8 +16,9 @@ const GaleryEsmeralda = () => {
   const [galery] = data.galeryCollection.items;
   const dataIMG = galery.imageCollection.items;
   return (
-    <>
-      <h1 style={{ textAlign: "center" }}>{galery.name}</h1>
+    <div style={{textAlign: "center",  marginTop: "4rem"}}>
+      <h1>{galery.name}</h1>
+      <p style={{marginBottom: "4rem"}}>{galery.description}</p>
       <div className="grid-container">
         {dataIMG.map((itemImage, index) => (
           <div key={index}>
@@ -25,7 +26,7 @@ const GaleryEsmeralda = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
@@ -36,6 +37,7 @@ const GALERY_NUEVA_ESMERALDA = gql`
     galeryCollection {
       items {
         name
+        description
         imageCollection {
           items {
             title

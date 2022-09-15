@@ -18,13 +18,12 @@ const Footer = () => {
 
   const { descriptionFooter } = infoFooter;
   const { items } = infoFooter.imagesCollection;
-  console.log(items);
 
   return (
     <Container as="footer">
       <div className={styles.container}>
-        {items.map((item) => (
-          <div>
+        {items.map((item, index) => (
+          <div key={index}>
             <img src={item.url} alt={item.title} />
           </div>
         ))}
