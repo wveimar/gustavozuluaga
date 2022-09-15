@@ -17,7 +17,7 @@ export default function NavBar() {
 
   return (
     <nav role="navigation" className="Navbar" aria-label="Main">
-      <Link to="/" className="nav-logo">
+      <Link to="/page?code=institucional" className="nav-logo">
         <img className="logo" src="/images/logoMenu.png"/>
       </Link>
       <ul className={`nav-items ${isOpen && "open"}`}>

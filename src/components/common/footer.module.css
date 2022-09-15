@@ -1,17 +1,23 @@
 .container {
-  border-top: 1px solid var(--border);
-  font-size: var(--text-sm);
-  margin-top: var(--space-2xl);
-  padding: var(--space-2xl) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container div {
+  width: 80rem
+}
+
+.description {
   text-align: right;
 }
 
-.container a {
-  border-bottom: 1.5px solid transparent;
-  font-weight: var(--medium);
-}
-
-.container a:hover {
-  border-bottom-color: var(--primary);
-  color: var(--primary);
+@media (max-width: 700px) {
+  .container {
+    display: grid;
+    justify-content: space-around;
+  }
+  .container div {
+    width: 100%;
+  }
 }

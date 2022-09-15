@@ -33,8 +33,7 @@ function SimplePageContentful({ code }) {
       <p
         style={{
           textAlign: "justify",
-          marginRight: "120px",
-          marginLeft: "120px",
+          margin: "3rem 3rem 3rem 3rem",
         }}
       >
         {page && page.description}
