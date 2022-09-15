@@ -15,27 +15,6 @@ export default function NavBar() {
 
   const { items } = data.menuNavigationCollection;
 
-
-
-  // const menuOptions = (menu) => {
-  //   return (
-  //     menu &&
-  //     menu.map((item) => (
-  //       <Link
-  //         className="navigationItem"
-  //         key={item.menuPath}
-  //         to={
-  //           item.menuType === "SimplePageLink"
-  //             ? `/page?code=${item.menuPath}`
-  //             : item.menuPath
-  //         }
-  //       >
-  //         {item.name}
-  //       </Link>
-  //     ))
-  //   );
-  // };
-
   return (
     <nav role="navigation" className="Navbar" aria-label="Main">
       <Link to="/" className="nav-logo">
@@ -43,10 +22,10 @@ export default function NavBar() {
       </Link>
       <ul className={`nav-items ${isOpen && "open"}`}>
         {items &&
-          items.map((item) => (
+          items.map((item, index) => (
             <Link
               className="nav-link"
-              key={item.menuPath}
+              key={index}
               to={
                 item.menuType === "SimplePageLink"
                   ? `/page?code=${item.menuPath}`
