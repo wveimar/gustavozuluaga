@@ -1,8 +1,8 @@
 import { gql, useQuery } from "@apollo/client";
 import React from "react";
 
-import Container from "./Container";
-import * as styles from "./footer.module.css";
+import Container from "../common/Container";
+import "./footer.css";
 
 const Footer = () => {
   const { error, data } = useQuery(FOOTER_INFO_QUERY);
@@ -21,14 +21,14 @@ const Footer = () => {
 
   return (
     <Container as="footer">
-      <div className={styles.container}>
+      <div className="container">
         {items.map((item, index) => (
           <div key={index}>
             <img src={item.url} alt={item.title} />
           </div>
         ))}
       </div>
-      <div className={styles.description}>
+      <div className="description">
         <p>{descriptionFooter}</p>
       </div>
     </Container>

@@ -1,17 +1,16 @@
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import NavBar from "../nav-bar/NavBar";
+import Footer from "../footer/Footer";
 import "./variables.css";
 import "./global.css";
-import * as styles from "./nav-bar.module.css";
 
 const Layout = ({ children }) => {
   return (
     <div>
       {/* <Seo /> */}
-      <header className={styles.header}>
+      <header>
         <NavBar />
       </header>
-      <main style={{ paddingTop: "100px" }}>{children}</main>
+            <main style={{ paddingTop: "100px" }}>{children}</main>
       <Footer />
     </div>
   );

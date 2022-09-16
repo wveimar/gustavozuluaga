@@ -1,7 +1,7 @@
 import React from "react";
 import { gql, useQuery } from "@apollo/client";
 
-function SimplePageContentful({ code }) {
+function SimplePage({ code }) {
   if (!code) {
     return <p>No Code!</p>;
   }
@@ -19,7 +19,6 @@ function SimplePageContentful({ code }) {
   }
   const [page] = data.simplePageCollection.items;
 
-  console.log(page.code);
   return (
     <div>
       {page.code === "escuela-taller-boyaca" ? (
@@ -42,7 +41,7 @@ function SimplePageContentful({ code }) {
   );
 }
 
-export default SimplePageContentful;
+export default SimplePage;
 
 const SIMPLE_PAGE_QUERY = gql`
   query simplePageCollection($where: SimplePageFilter) {

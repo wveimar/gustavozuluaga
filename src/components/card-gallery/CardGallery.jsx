@@ -1,9 +1,9 @@
 import React from "react";
-import './CardGalery.css'
+import './card-gallery.css'
 
-const CardGalery = ({infoImage}) => {
+const CardGallery = ({infoImage}) => {
   return (
-    <div className="grid-container">
+    <div className="card-gallery">
         <article id="3685" className="location-listing">
           <p className="location-title">{infoImage.description}</p>
           <div className="location-image">
@@ -19,4 +19,4 @@ const CardGalery = ({infoImage}) => {
   );
 };
 
-export default CardGalery;
+export default CardGallery;

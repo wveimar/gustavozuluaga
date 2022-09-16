@@ -1,9 +1,13 @@
 .Navbar {
-    height: 80px;
+    height: 100px;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    background-color: white;
+    width: 100%;
+    z-index: 100;
 }
 
 .Navbar > .nav-logo {
@@ -39,6 +43,7 @@
     height: 2px;
     background-color: black;
     transition: all .45s;
+
 }
 
 .Navbar > .nav-items > .nav-link:hover::before  {
