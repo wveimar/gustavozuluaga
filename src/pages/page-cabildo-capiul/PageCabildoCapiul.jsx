@@ -32,10 +32,10 @@ const PageCabildoCapiul = ({ pageCode }) => {
         </PageSection>
         <PageSection sectionCode="s3" code={pageCode}>
           <Gallery code={pageCode} />
-        </PageSection>
+        </PageSection> */}
         <PageSection sectionCode="s4" code={pageCode}>
           <GridCards variant="blog" code={`${pageCode}-s4`} />
-        </PageSection>     */}
+        </PageSection>    
       </div>
     </>
   );
