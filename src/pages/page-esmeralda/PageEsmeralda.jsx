@@ -32,7 +32,7 @@ const PageEsmeralda = ({ pageCode }) => {
           <GridPosts variant="simple-post" code={`${pageCode}-s2`} />
         </PageSection>
         <PageSection sectionCode="s3" code={pageCode}>
-          <Gallery code={pageCode} />
+          <Gallery code={`gallery-${pageCode}`} />
         </PageSection>
         <PageSection sectionCode="s4" code={pageCode}>
           <GridCards variant="blog" code={`${pageCode}-s4`} />

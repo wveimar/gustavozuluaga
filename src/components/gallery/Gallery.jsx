@@ -6,7 +6,7 @@ import "./gallery.module.css";
 const Gallery = ({ code }) => {
   const { error, data } = useQuery(GALLERY_QUERY, {
     variables: {
-      where: { parentCode_contains: code },
+      where: { code_contains: code },
     },
   });
 

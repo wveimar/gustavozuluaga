@@ -25,7 +25,7 @@ const PostDetail = () => {
   return (
     <div>
       <Post
-        title={post.title}
+        title={post?.title}
         imageUrl={post.mainPicture?.url}
         description={post.description}
         isDescriptionHtml={post.isDescriptionHtml}

@@ -2,8 +2,9 @@ import React from "react";
 import { useQuery, gql } from "@apollo/client";
 import Image from "../../components/image/Image";
 import GridCards from "../../components/grid-cards/GridCards";
+import GridPosts from "../../components/grid-posts/GridPosts";
 import PageSection from "../../components/page-section/PageSection";
-
+import Gallery from "../../components/gallery/Gallery";
 
 const PageCabildoCapiul = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_CABILDO_CAPIUL_QUERY, {
@@ -27,15 +28,15 @@ const PageCabildoCapiul = ({ pageCode }) => {
         <PageSection sectionCode="s1" code={pageCode}>
           <GridCards variant="card-link" code={`${pageCode}-s1`} />
         </PageSection>
-        {/* <PageSection sectionCode="s2" code={pageCode}>
+        <PageSection sectionCode="s2" code={pageCode}>
           <GridPosts variant="simple-post" code={`${pageCode}-s2`} />
-        </PageSection> */}
-        {/* <PageSection sectionCode="s3" code={pageCode}>
-          <Gallery code={pageCode} />
-        </PageSection> */}
+        </PageSection>
+        <PageSection sectionCode="s3" code={pageCode}>
+        <Gallery code={`gallery-${pageCode}`} />
+        </PageSection>
         <PageSection sectionCode="s4" code={pageCode}>
           <GridCards variant="blog" code={`${pageCode}-s4`} />
-        </PageSection>    
+        </PageSection>
       </div>
     </>
   );
