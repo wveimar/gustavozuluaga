@@ -29,8 +29,8 @@ const PageCabildoCapiul = ({ pageCode }) => {
         </PageSection>
         {/* <PageSection sectionCode="s2" code={pageCode}>
           <GridPosts variant="simple-post" code={`${pageCode}-s2`} />
-        </PageSection>
-        <PageSection sectionCode="s3" code={pageCode}>
+        </PageSection> */}
+        {/* <PageSection sectionCode="s3" code={pageCode}>
           <Gallery code={pageCode} />
         </PageSection> */}
         <PageSection sectionCode="s4" code={pageCode}>
