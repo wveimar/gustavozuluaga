@@ -7,6 +7,7 @@ import PostDetail from "./pages/post-detail/PostDetail";
 import PageEsmeralda from "./pages/page-esmeralda/PageEsmeralda";
 import { PAGE_CODES } from "./utils/page-codes";
 import PageCabildoCapiul from "./pages/page-cabildo-capiul/PageCabildoCapiul";
+import PageKaviari from "./pages/page-kaviari/PageKaviari";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/post" exact element={<PostDetail />} />
         <Route path={`/${PAGE_CODES.COMUNIDAD_NUEVA_ESMERALDA}`} element={<PageEsmeralda pageCode={PAGE_CODES.COMUNIDAD_NUEVA_ESMERALDA} />} />
         <Route path={`/${PAGE_CODES.CABILDO_CAPIUL}`} element={<PageCabildoCapiul pageCode={PAGE_CODES.CABILDO_CAPIUL} />} />
+        <Route path={`/${PAGE_CODES.KAVIARI}`} element={<PageKaviari pageCode={PAGE_CODES.KAVIARI} />} />
       </Routes>
     </Layout>
   );
