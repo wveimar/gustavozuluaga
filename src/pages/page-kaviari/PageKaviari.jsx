@@ -1,5 +1,6 @@
 import { gql, useQuery } from "@apollo/client";
 import React from "react";
+import Gallery from "../../components/gallery/Gallery";
 import GridCards from "../../components/grid-cards/GridCards";
 import Image from "../../components/image/Image";
 import PageSection from "../../components/page-section/PageSection";
@@ -26,6 +27,9 @@ const PageKaviari = ({ pageCode }) => {
         <Image description={image.description} url={image.image.url} />
         <PageSection sectionCode="s1" code={pageCode}>
           <GridCards variant="card-link" code={`${pageCode}-s1`} />
+          <PageSection sectionCode="s3" code={pageCode}>
+            <Gallery code={pageCode} />
+          </PageSection>
         </PageSection>
       </div>
     </>
