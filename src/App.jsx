@@ -13,7 +13,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/home" exact element={<Home />} />
+        <Route path="/" exact element={<Page pageCode="institucional"/>} />
         <Route path="/page" exact element={<Page />} />
         <Route path="/post" exact element={<PostDetail />} />
         <Route path={`/${PAGE_CODES.COMUNIDAD_NUEVA_ESMERALDA}`} element={<PageEsmeralda pageCode={PAGE_CODES.COMUNIDAD_NUEVA_ESMERALDA} />} />
