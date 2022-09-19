@@ -22,7 +22,12 @@ const CardGallery = ({ infoImage }) => {
           </article>
         </div>
       </button>
-      <Modal isShowing={isShowing} hide={toggle} infoImageIMG={infoImage.url} />
+      <Modal
+        isShowing={isShowing}
+        hide={toggle}
+        infoImageIMG={infoImage.url}
+        infoDescription={infoImage.description}
+      />
     </>
   );
 };

@@ -2,6 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import React from "react";
 import Gallery from "../../components/gallery/Gallery";
 import GridCards from "../../components/grid-cards/GridCards";
+import GridMedia from "../../components/grid-media/GridMedia";
 import GridPosts from "../../components/grid-posts/GridPosts";
 import Image from "../../components/image/Image";
 import PageSection from "../../components/page-section/PageSection";
@@ -34,6 +35,9 @@ const PageKaviari = ({ pageCode }) => {
         </PageSection>
         <PageSection sectionCode="s3" code={pageCode}>
           <Gallery code={`gallery-${pageCode}`} />
+        </PageSection>
+        <PageSection sectionCode="s5" code={pageCode}>
+          <GridMedia code={`${pageCode}`} />
         </PageSection>
       </div>
     </>

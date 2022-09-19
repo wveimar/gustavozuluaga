@@ -3,10 +3,10 @@
     top: 0;
     left: 0;
     z-index: 1040;
-    width: 500vw;
-    height: 500vh;
+    width: 800vw;
+    height: 800vh;
     background-color: #000;
-    opacity: .5;
+    opacity: 0.7
   }
   
   .modal-wrapper {

@@ -5,6 +5,7 @@ import GridCards from "../../components/grid-cards/GridCards";
 import GridPosts from "../../components/grid-posts/GridPosts";
 import Gallery from "../../components/gallery/Gallery";
 import PageSection from "../../components/page-section/PageSection";
+import GridMedia from "../../components/grid-media/GridMedia";
 
 const PageEsmeralda = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_ESMERALDA_QUERY, {
@@ -37,7 +38,9 @@ const PageEsmeralda = ({ pageCode }) => {
         <PageSection sectionCode="s4" code={pageCode}>
           <GridCards variant="blog" code={`${pageCode}-s4`} />
         </PageSection>
-        <PageSection sectionCode="s5" code={pageCode}></PageSection>
+        <PageSection sectionCode="s5" code={pageCode}>
+          <GridMedia code={`${pageCode}`} />
+        </PageSection>
       </div>
     </>
   );

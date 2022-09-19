@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./modal.css";
 
-const Modal = ({ isShowing, hide, infoImageIMG }) =>
+const Modal = ({ isShowing, hide, infoImageIMG, infoDescription }) =>
   isShowing
     ? ReactDOM.createPortal(
         <React.Fragment>
@@ -27,6 +27,7 @@ const Modal = ({ isShowing, hide, infoImageIMG }) =>
                 </button>
               </div>
               <img src={infoImageIMG} />
+              <p>{infoDescription}</p>
             </div>
           </div>
         </React.Fragment>,
