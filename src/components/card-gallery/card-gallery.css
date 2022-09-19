@@ -21,7 +21,7 @@
   transition: filter 0.3s ease-in;
   transform: scale(1.1);
   width: 100%; /* need to overwrite inline dimensions */
-  height: auto;
+  height: 17rem;
 }
 
 .location-title {
