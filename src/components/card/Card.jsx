@@ -7,7 +7,9 @@ const Card = ({ code, variant, imageUrl, name, shortDescription }) => {
     case "card-link":
       cardTemplate = (
         <a href={`/post?code=${code}`} className="card">
-          <img src={imageUrl} alt="image" className="img" />
+          <div >
+            <img src={imageUrl} alt="image" />
+          </div>
           <div className="card-container">
             <h4>
               <b>{name}</b>
