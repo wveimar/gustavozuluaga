@@ -22,12 +22,10 @@ const GridMedia = ({ code }) => {
   const URLVideos = itemsURL.list.videos;
 
   return (
-    <div className="grid-container">
+    <div className="video-grid-container">
       {URLVideos &&
         URLVideos.map((item, index) => (
-          <div style={{margin: "2rem"}}>
-            <VideoMedia url={item.url} key={index}/>
-          </div>
+          <VideoMedia className="video-player" url={item.url} key={index} />
         ))}
     </div>
   );
