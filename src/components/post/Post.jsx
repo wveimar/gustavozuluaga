@@ -6,7 +6,7 @@ const Post = ({ title, variant, description, imageUrl, isDescriptionHtml }) => {
   switch (variant) {
     case "simple-post":
       postTemplate = (
-        <div className="post">
+        <div className="post" style={{ margin: "10%", textAlign: "justify" }}>
           <img src={imageUrl} alt="image" className="img" />
           <div className="post-container">
             {!isDescriptionHtml ? (
