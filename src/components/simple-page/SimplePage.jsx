@@ -21,14 +21,7 @@ function SimplePage({ code }) {
 
   return (
     <div>
-      {page.code === "escuela-taller-boyaca" ? (
-        <img width={500} src={page && page.image.url}></img>
-      ) : (
-        <div style={{ marginTop: "-5rem", marginRight: "8rem", marginLeft: "8rem" }}>
-          <img width={500} src={page && page.image.url}></img>
-        </div>
-      )}
-      {/* <img width={500} src={page && page.image.url}></img> */}
+      <img width={500} src={page && page.image.url}></img>
       <p
         style={{
           textAlign: "justify",
