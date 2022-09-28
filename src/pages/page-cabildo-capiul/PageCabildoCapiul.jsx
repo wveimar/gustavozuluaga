@@ -5,6 +5,8 @@ import GridCards from "../../components/grid-cards/GridCards";
 import GridPosts from "../../components/grid-posts/GridPosts";
 import PageSection from "../../components/page-section/PageSection";
 import Gallery from "../../components/gallery/Gallery";
+import GridMediaVariant from "../../components/grid-media/GridMediaVariant";
+
 
 const PageCabildoCapiul = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_CABILDO_CAPIUL_QUERY, {
@@ -36,6 +38,12 @@ const PageCabildoCapiul = ({ pageCode }) => {
         </PageSection>
         <PageSection sectionCode="s4" code={pageCode}>
           <GridCards variant="blog" code={`${pageCode}-s4`} />
+        </PageSection>
+        <PageSection sectionCode="s5" code={pageCode}>
+          <GridMediaVariant code={`${pageCode}`} groups={"vg0"} title={"Testimonio"}/>
+          <GridMediaVariant code={`${pageCode}`} groups={"vg1"} title={"Lecciones"}/>
+          <GridMediaVariant code={`${pageCode}`} groups={"vg2"} title={"Cantos"}/>
+          <GridMediaVariant code={`${pageCode}`} groups={"vg3"} title={"Alfabeto de la lengua piinemuna"}/>
         </PageSection>
       </div>
     </>
