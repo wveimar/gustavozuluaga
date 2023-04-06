@@ -37,7 +37,7 @@ const PageKaviari = ({ pageCode }) => {
           <Gallery code={`gallery-${pageCode}`} />
         </PageSection>
         <PageSection sectionCode="s5" code={pageCode}>
-          <GridMedia code={`${pageCode}`} />
+          <GridMedia code={`${pageCode}-s5-vg`} />
         </PageSection>
       </div>
     </>

@@ -32,10 +32,10 @@ const PagePuinave = ({ pageCode }) => {
         <GridCards variant="blog" code={`${pageCode}-s4`} />
       </PageSection>
       <PageSection sectionCode="s5" code={pageCode}>
-        <GridMedia code={`${pageCode}`} />
+        <GridMedia code={`${pageCode}-s5-vg`} />
       </PageSection>
       <PageSection sectionCode="s6" code={pageCode}>
-        <GridMedia code={`${pageCode}`} />
+        <GridMedia code={`${pageCode}-s6-vg`} />
       </PageSection>
     </div>
   );
