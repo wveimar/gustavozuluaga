@@ -1,16 +1,24 @@
+/* Definir variables */
+:root {
+  --color-blanco: #FFFFFF;
+  --color-negro: #000000;
+  --alto-imagen: 17rem;
+  --hover-filtro: blur(2px);
+}
 
+/* Contenedor de la galería */
 .gallery-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1em;
 }
 
-
-/* hover styles */
-.location-listing {
+/* Tarjeta de ubicación */
+.location-card {
   position: relative;
 }
 
+/* Imagen de ubicación */
 .location-image {
   line-height: 0;
   overflow: hidden;
@@ -20,10 +28,11 @@
   filter: blur(0px);
   transition: filter 0.3s ease-in;
   transform: scale(1.1);
-  width: 100%; /* need to overwrite inline dimensions */
-  height: 17rem;
+  width: 100%; /* necesitamos sobrescribir las dimensiones en línea */
+  height: var(--alto-imagen);
 }
 
+/* Título de la ubicación */
 .location-title {
   font-size: 1em;
   text-decoration: none;
@@ -35,30 +44,19 @@
   left: 0;
   opacity: 0;
   transition: opacity .5s;
-  color: white;
+  color: var(--color-blanco);
   text-align: center;
   
-  /* position the text in t’ middle*/
+  /* Centra el texto vertical y horizontalmente */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.location-listing:hover .location-title {
-  opacity: 1;
-}
 
-.location-listing:hover .location-image img {
-  filter: blur(2px);
-}
-
-
-/* for touch screen devices */
-@media (hover: none) { 
-  .location-title {
-    opacity: 1;
-  }
-  .location-image img {
-    filter: blur(2px);
-  }
-}
+/* Comentarios */
+/* Define variables CSS */
+/* Contenedor de la galería */
+/* Tarjeta de ubicación */
+/* Imagen de ubicación */
+/* T
