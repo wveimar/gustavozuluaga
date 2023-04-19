@@ -19,8 +19,6 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  // get the authentication token from local storage if it exists
-  // return the headers to the context so httpLink can read them
   return {
     headers: {
       ...headers,
@@ -38,10 +36,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <BrowserRouter>
-        {/* <Provider store={store}> */}
-          <App />
-        {/* </Provider> */}
+        <App />
       </BrowserRouter>
     </ApolloProvider>
- </React.StrictMode>
+  </React.StrictMode>
 );

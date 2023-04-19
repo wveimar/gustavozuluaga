@@ -6,7 +6,6 @@ import "./global.css";
 const Layout = ({ children }) => {
   return (
     <div>
-      {/* <Seo /> */}
       <header>
         <NavBar />
       </header>
