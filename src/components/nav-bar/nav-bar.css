@@ -22,9 +22,9 @@
 }
 
 .Navbar > .nav-items > .nav-link {
-    font-size: 16px;
+    font-size: 14px;
     text-decoration: none;
-    margin: 20px;
+    margin: 12px;
     position: relative;
     opacity: 0.9;
     text-align: center;
@@ -53,6 +53,15 @@
 
 .Navbar > .nav-toggle {
     display: none;
+}
+
+@media (max-width: 1170px) {
+
+    .Navbar > .nav-items > .nav-link {
+        font-size: 12px;
+        text-decoration: none;
+        margin: 12px;
+    } 
 }
 
 @media (max-width: 1000px) {

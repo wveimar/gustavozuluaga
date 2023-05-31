@@ -1,13 +1,10 @@
 import { gql, useQuery } from "@apollo/client";
-import React from "react";
 import Image from "../../components/image/Image";
 import PageSection from "../../components/page-section/PageSection";
 import GridCards from "../../components/grid-cards/GridCards";
-import GridMedia from "../../components/grid-media/GridMedia";
-import Gallery from "../../components/gallery/Gallery";
 
-const PagePuinave = ({ pageCode }) => {
-  const { error, data } = useQuery(PAGE_PUINAVE_QUERY, {
+const PageNukak = ({ pageCode }) => {
+  const { error, data } = useQuery(PAGE_NUKAK_QUERY, {
     variables: {
       where: { code_contains: pageCode },
     },
@@ -31,22 +28,13 @@ const PagePuinave = ({ pageCode }) => {
       <PageSection sectionCode="s4" code={pageCode}>
         <GridCards variant="blog" code={`${pageCode}-s4`} />
       </PageSection>
-      <PageSection sectionCode="s3" code={pageCode}>
-        <Gallery code={`gallery-${pageCode}`} />
-      </PageSection>
-      <PageSection sectionCode="s5" code={pageCode}>
-        <GridMedia code={`${pageCode}-s5-vg`} />
-      </PageSection>
-      <PageSection sectionCode="s6" code={pageCode}>
-        <GridMedia code={`${pageCode}-s6-vg`} />
-      </PageSection>
     </div>
   );
 };
 
-export default PagePuinave;
+export default PageNukak;
 
-const PAGE_PUINAVE_QUERY = gql`
+const PAGE_NUKAK_QUERY = gql`
   query simplePageCollection($where: SimplePageFilter) {
     simplePageCollection(where: $where) {
       items {

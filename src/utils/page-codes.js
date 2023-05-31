@@ -3,4 +3,6 @@ export const PAGE_CODES = {
   CABILDO_CAPIUL: "cabildo-capiul",
   KAVIARI: "kaviari",
   PUINAVE: "puinave",
+  NUKAK: "nukak",
+  JIW: "jiw",
 };

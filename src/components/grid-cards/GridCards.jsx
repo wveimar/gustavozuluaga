@@ -10,7 +10,6 @@ const GridCards = ({ code, variant }) => {
       order: "sort_ASC",
     },
   });
-  console.log(code);
 
   if (error && error.networkError) {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
