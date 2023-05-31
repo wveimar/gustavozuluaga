@@ -2,6 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import Image from "../../components/image/Image";
 import PageSection from "../../components/page-section/PageSection";
 import GridCards from "../../components/grid-cards/GridCards";
+import Gallery from "../../components/gallery/Gallery";
 
 const PageNukak = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_NUKAK_QUERY, {
@@ -28,6 +29,9 @@ const PageNukak = ({ pageCode }) => {
       <PageSection sectionCode="s4" code={pageCode}>
         <GridCards variant="card-link" code={`${pageCode}-s4`} />
       </PageSection>
+      <PageSection sectionCode="s3" code={pageCode}>
+          <Gallery code={`gallery-${pageCode}`} />
+        </PageSection>
     </div>
   );
 };
