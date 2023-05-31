@@ -28,6 +28,9 @@ const PageJiw = ({ pageCode }) => {
       <PageSection sectionCode="s4" code={pageCode}>
         <GridCards variant="card-link" code={`${pageCode}-s4`} />
       </PageSection>
+      <PageSection sectionCode="s3" code={pageCode}>
+          <Gallery code={`gallery-${pageCode}`} />
+        </PageSection>
     </div>
   );
 };
