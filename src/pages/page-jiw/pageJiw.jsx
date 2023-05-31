@@ -3,8 +3,8 @@ import Image from "../../components/image/Image";
 import PageSection from "../../components/page-section/PageSection";
 import GridCards from "../../components/grid-cards/GridCards";
 
-const PageNukak = ({ pageCode }) => {
-  const { error, data } = useQuery(PAGE_NUKAK_QUERY, {
+const PageJiw = ({ pageCode }) => {
+  const { error, data } = useQuery(PAGE_JIW_QUERY, {
     variables: {
       where: { code_contains: pageCode },
     },
@@ -32,9 +32,9 @@ const PageNukak = ({ pageCode }) => {
   );
 };
 
-export default PageNukak;
+export default PageJiw;
 
-const PAGE_NUKAK_QUERY = gql`
+const PAGE_JIW_QUERY = gql`
   query simplePageCollection($where: SimplePageFilter) {
     simplePageCollection(where: $where) {
       items {

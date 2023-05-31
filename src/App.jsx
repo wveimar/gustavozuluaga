@@ -10,6 +10,7 @@ import PageCabildoCapiul from "./pages/page-cabildo-capiul/PageCabildoCapiul";
 import PageKaviari from "./pages/page-kaviari/PageKaviari";
 import PagePuinave from "./pages/page-puinave/PagePuinave";
 import PageNukak from "./pages/page-nukak/PageNukak";
+import PageJiw from "./pages/page-jiw/pageJiw"
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path={`/${PAGE_CODES.KAVIARI}`} element={<PageKaviari pageCode={PAGE_CODES.KAVIARI} />} />
         <Route path={`/${PAGE_CODES.PUINAVE}`} element={<PagePuinave pageCode={PAGE_CODES.PUINAVE} />} />
         <Route path={`/${PAGE_CODES.NUKAK}`} element={<PageNukak pageCode={PAGE_CODES.NUKAK} />} />
+        <Route path={`/${PAGE_CODES.JIW}`} element={<PageJiw pageCode={PAGE_CODES.JIW} />} />
       </Routes>
     </Layout>
   );
