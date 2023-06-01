@@ -2,6 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import Image from "../../components/image/Image";
 import PageSection from "../../components/page-section/PageSection";
 import GridCards from "../../components/grid-cards/GridCards";
+import Gallery from "../../components/gallery/Gallery";
 
 const PageJiw = ({ pageCode }) => {
   const { error, data } = useQuery(PAGE_JIW_QUERY, {
@@ -10,6 +11,7 @@ const PageJiw = ({ pageCode }) => {
     },
   });
 
+  console.log(pageCode)
   if (error && error.networkError) {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
   }
@@ -25,12 +27,19 @@ const PageJiw = ({ pageCode }) => {
       <PageSection sectionCode="s1" code={pageCode}>
         <GridCards variant="card-link" code={`${pageCode}-s1`} />
       </PageSection>
-      <PageSection sectionCode="s4" code={pageCode}>
-        <GridCards variant="card-link" code={`${pageCode}-s4`} />
+      <PageSection sectionCode="s2" code={pageCode}>
+        <Gallery code={`gallery-${pageCode}-s2`} />
       </PageSection>
       <PageSection sectionCode="s3" code={pageCode}>
-          <Gallery code={`gallery-${pageCode}`} />
-        </PageSection>
+        <Gallery code={`gallery-${pageCode}-s3`} />
+      </PageSection>
+      <PageSection sectionCode="s4" code={pageCode}>
+        <Gallery code={`gallery-${pageCode}-s4`} />
+      </PageSection>
+      <PageSection sectionCode="s5" code={pageCode}>
+        <Gallery code={`gallery-${pageCode}-s5`} />
+      </PageSection>
+      <PageSection sectionCode="s6" code={pageCode}></PageSection>
     </div>
   );
 };

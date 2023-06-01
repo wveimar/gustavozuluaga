@@ -30,8 +30,8 @@ const PageNukak = ({ pageCode }) => {
         <GridCards variant="card-link" code={`${pageCode}-s4`} />
       </PageSection>
       <PageSection sectionCode="s3" code={pageCode}>
-          <Gallery code={`gallery-${pageCode}`} />
-        </PageSection>
+        <Gallery code={`gallery-${pageCode}`} />
+      </PageSection>
     </div>
   );
 };
