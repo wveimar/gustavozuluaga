@@ -11,7 +11,7 @@ const PageJiw = ({ pageCode }) => {
     },
   });
 
-  console.log(pageCode)
+  console.log(pageCode);
   if (error && error.networkError) {
     return <p>Error: {error.networkError.result.errors[0].message}</p>;
   }
@@ -40,6 +40,9 @@ const PageJiw = ({ pageCode }) => {
         <Gallery code={`gallery-${pageCode}-s5`} />
       </PageSection>
       <PageSection sectionCode="s6" code={pageCode}></PageSection>
+      <PageSection sectionCode="s7" code={pageCode}>
+        <Gallery code={`gallery-${pageCode}-s7`} />
+      </PageSection>
     </div>
   );
 };

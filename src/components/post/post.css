@@ -1,14 +1,14 @@
 .post {
-  margin: 15px;
+  margin: 5%;
+  text-align: justify;
+  
 }
 
-.post img {
-  height: 450px;
+.img {
+  width: 100%;
+  height: auto;
 }
 
-@media (max-width: 500px) {
-  .post img {
-    padding: 5px;
-    height: 350px;
-  }
+.post-container {
+  margin-top: 20px;
 }

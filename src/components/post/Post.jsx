@@ -6,7 +6,7 @@ const Post = ({ title, variant, description, imageUrl, isDescriptionHtml }) => {
   switch (variant) {
     case "simple-post":
       postTemplate = (
-        <div className="post" style={{ margin: "10%", textAlign: "justify" }}>
+        <div className="post">
           <img src={imageUrl} alt="image" className="img" />
           <div className="post-container">
             {!isDescriptionHtml ? (
@@ -16,6 +16,7 @@ const Post = ({ title, variant, description, imageUrl, isDescriptionHtml }) => {
             )}
           </div>
         </div>
+
       );
       break;
 
